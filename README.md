@@ -51,6 +51,6 @@ my practice for learning rust
     Let __nice_count_one : i32 = 0;
     Let _nice_count_two = __nice_count_one as i32;
 #### Print out variable
-1. println!("Value is: {}", __nice_count_one);
-1. println!("Value is: {__nice_count_one}");
+`println!("Value is: {}", __nice_count_one);`
+`println!("Value is: {__nice_count_one}");`
 
