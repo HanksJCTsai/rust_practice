@@ -13,10 +13,16 @@ fn main() {
             io::stdin()
                 .read_line(&mut guess)
                 .expect("Failed to read line");
-
+            if guess.trim().to_uppercase().eq_ignore_ascii_case("Q") {
+                println!("You quit the game!");
+                break;
+            }
             let guess: u32 = match guess.trim().parse() {
                 Ok(num) => num,
-                Err(_) => continue,
+                Err(_) => {
+                    println!("Please input number !");
+                    continue;
+                }
             };
 
             println!("Your guessed number:{guess}");
